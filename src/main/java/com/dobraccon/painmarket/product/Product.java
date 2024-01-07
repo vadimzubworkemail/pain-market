@@ -4,12 +4,12 @@ import lombok.Getter;
 
 @Getter
 public class Product {
-    private final Long id;
+    private final long id;
     private final String name;
-    private final Float price;
+    private final float price;
     private final int discount;
 
-    public Product(Long id, String name, Float price, int discount) {
+    public Product(long id, String name, float price, int discount) {
         this.id = id;
         this.name = name;
         if (price <= 0) {
@@ -21,8 +21,4 @@ public class Product {
         }
         this.discount = discount;
     }
-
-//    public Float getADiscountPrice() {
-//        return price - (price / 100 * discount);
-//    }
 }
