@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public class Customer {
-    private final Long id;
+    private final long id;
     private final String email;
 
-    public Customer(Long id, String email) {
+    public Customer(long id, String email) {
         this.id = id;
         this.email = email;
     }
