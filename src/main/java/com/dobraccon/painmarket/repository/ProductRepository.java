@@ -13,7 +13,7 @@ public class ProductRepository {
     public void saveProduct(Product product) {
         String sql = String.format(
                 "INSERT INTO product(id, name, price, discount) " +
-                        "VALUES(nextval('product_sequence'), '%s', %f, '%d');",
+                        "VALUES(nextval('product_sequence'), '%s', '%s', '%s');",
                 product.getName(),
                 product.getPrice(),
                 product.getDiscount());
