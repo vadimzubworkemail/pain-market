@@ -1,6 +1,6 @@
-CREATE TABLE public.product(
+CREATE TABLE IF NOT EXISTS product(
     id BIGINT PRIMARY KEY NOT NULL,
-    name VARCHAR,
-    price REAL,
-    discount INT
+    name VARCHAR(128) NOT NULL,
+    price REAL NOT NULL,
+    discount INT NOT NULL DEFAULT 0
 )

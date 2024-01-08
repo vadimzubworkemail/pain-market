@@ -1,4 +1,4 @@
-CREATE TABLE public.customer(
+CREATE TABLE IF NOT EXISTS customer(
     id BIGINT PRIMARY KEY NOT NULL,
-    email VARCHAR
+    email VARCHAR NOT NULL
 )

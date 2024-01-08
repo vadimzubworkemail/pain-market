@@ -1,4 +1,2 @@
-CREATE SEQUENCE customer_sequence
-START 20;
-
-SELECT nextval('customer_sequence');
+CREATE SEQUENCE IF NOT EXISTS customer_sequence
+START 101;
