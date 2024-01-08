@@ -2,17 +2,19 @@ package com.dobraccon.painmarket.repository;
 
 import com.dobraccon.painmarket.product.Customer;
 import lombok.AllArgsConstructor;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
-import java.util.Random;
 
 @Repository
 @AllArgsConstructor
 public class CustomerRepository {
+    JdbcTemplate jdbcTemplate;
 
-    public Customer saveCustomer(Customer customer) {
-        return new Customer(
-                new Random().nextLong(), customer.getEmail()
-        );
+
+    public void saveCustomer(Customer customer) {
+        String sql = String.format(
+                "INSERT INTO customer(id, email) VALUES(nextval('customer_sequence'), '%s');"
+                , customer.getEmail());
+        jdbcTemplate.execute(sql);
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ProductService {
     private final ProductRepository repository;
 
-    public Product saveProduct(Product product) {
-        return repository.saveProduct(product);
+    public void saveProduct(Product product) {
+        repository.saveProduct(product);
     }
 }
