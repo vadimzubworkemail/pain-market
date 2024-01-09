@@ -1,7 +1,7 @@
 package com.dobraccon.painmarket.controller;
 
-import com.dobraccon.painmarket.model.Customer;
-import com.dobraccon.painmarket.service.CustomerService;
+import com.dobraccon.painmarket.model.Delivery;
+import com.dobraccon.painmarket.service.DeliveryService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/customer")
-public class CustomerController {
-    private final CustomerService service;
+@RequestMapping("/delivery")
+public class DeliveryController {
+    private DeliveryService service;
 
     @PostMapping
-    public void saveCustomer(@RequestBody Customer customer) {
-        service.saveCustomer(customer);
+    public void createDelivery(@RequestBody Delivery delivery) {
+        service.createDelivery(delivery);
     }
 }

@@ -1,6 +1,6 @@
 package com.dobraccon.painmarket.repository;
 
-import com.dobraccon.painmarket.product.Order;
+import com.dobraccon.painmarket.model.Order;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
