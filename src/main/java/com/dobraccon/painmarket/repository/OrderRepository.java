@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @AllArgsConstructor
 public class OrderRepository {
-    JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     public void createOrder(Order order) {
         String sql = String.format(

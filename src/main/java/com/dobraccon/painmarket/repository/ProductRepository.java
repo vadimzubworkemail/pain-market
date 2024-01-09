@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @AllArgsConstructor
 public class ProductRepository {
-    JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     public void saveProduct(Product product) {
         String sql = String.format(
