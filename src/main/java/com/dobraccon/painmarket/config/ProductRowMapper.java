@@ -1,6 +1,6 @@
 package com.dobraccon.painmarket.config;
 
-import com.dobraccon.painmarket.product.Product;
+import com.dobraccon.painmarket.model.Product;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

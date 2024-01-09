@@ -1,6 +1,6 @@
 package com.dobraccon.painmarket.controller;
 
-import com.dobraccon.painmarket.product.Product;
+import com.dobraccon.painmarket.model.Product;
 import com.dobraccon.painmarket.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
