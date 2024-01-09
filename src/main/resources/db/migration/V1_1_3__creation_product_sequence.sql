@@ -1,0 +1,2 @@
+CREATE SEQUENCE IF NOT EXISTS product_sequence
+START 101;

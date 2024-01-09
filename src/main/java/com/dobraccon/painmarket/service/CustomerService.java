@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
     private final CustomerRepository repository;
 
-    public Customer saveCustomer(Customer customer) {
-        return repository.saveCustomer(customer);
+    public void saveCustomer(Customer customer) {
+        repository.saveCustomer(customer);
     }
 }
