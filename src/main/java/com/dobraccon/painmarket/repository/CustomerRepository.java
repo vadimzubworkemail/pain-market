@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @AllArgsConstructor
 public class CustomerRepository {
-    JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
 
     public void saveCustomer(Customer customer) {
