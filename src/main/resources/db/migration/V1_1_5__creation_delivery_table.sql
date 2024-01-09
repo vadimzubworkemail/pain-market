@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS delivery(
     id BIGSERIAL PRIMARY KEY NOT NULL,
-    order_id BIGSERIAL NOT NULL,
-    customer_id BIGSERIAL NOT NULL,
+    order_id BIGSERIAL NOT NULL REFERENCES orders(id),
+    customer_id BIGSERIAL NOT NULL REFERENCES customer(id),
     address VARCHAR(256) NOT NULL
 );
 
