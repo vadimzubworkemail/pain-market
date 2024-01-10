@@ -32,26 +32,3 @@ CREATE TABLE IF NOT EXISTS orders(
                                      client_id BIGSERIAL NOT NULL REFERENCES customer(id),
                                      price BIGSERIAL NOT NULL
 );
-
-CREATE SEQUENCE IF NOT EXISTS orders_sequence START 101;
-
-INSERT INTO orders(id, product_id, client_id, price) VALUES(nextval('orders_sequence'), 101, 101, 100);
-INSERT INTO orders(id, product_id, client_id, price) VALUES(nextval('orders_sequence'), 102, 102, 200);
-INSERT INTO orders(id, product_id, client_id, price) VALUES(nextval('orders_sequence'), 103, 103, 300);
-INSERT INTO orders(id, product_id, client_id, price) VALUES(nextval('orders_sequence'), 104, 104, 400);
-INSERT INTO orders(id, product_id, client_id, price) VALUES(nextval('orders_sequence'), 105, 105, 500);
-
-CREATE TABLE IF NOT EXISTS delivery(
-                                       id BIGSERIAL PRIMARY KEY NOT NULL,
-                                       order_id BIGSERIAL NOT NULL REFERENCES orders(id),
-                                       customer_id BIGSERIAL NOT NULL REFERENCES customer(id),
-                                       address VARCHAR(256) NOT NULL
-);
-
-CREATE SEQUENCE IF NOT EXISTS delivery_sequence START 101;
-
-INSERT INTO delivery(id, order_id, customer_id, address) VALUES(nextval('delivery_sequence'), 101, 101, 'Рябиновая');
-INSERT INTO delivery(id, order_id, customer_id, address) VALUES(nextval('delivery_sequence'), 102, 102, 'Малиновая');
-INSERT INTO delivery(id, order_id, customer_id, address) VALUES(nextval('delivery_sequence'), 103, 103, 'Клубничная');
-INSERT INTO delivery(id, order_id, customer_id, address) VALUES(nextval('delivery_sequence'), 104, 104, 'Земляничная');
-INSERT INTO delivery(id, order_id, customer_id, address) VALUES(nextval('delivery_sequence'), 105, 105, 'Виноградная');
