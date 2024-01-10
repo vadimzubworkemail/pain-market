@@ -13,4 +13,8 @@ public class CustomerService {
     public void saveCustomer(Customer customer) {
         repository.saveCustomer(customer);
     }
+
+    public Customer findByCustomerId(long id) {
+        return repository.findByCustomerId(id);
+    }
 }

@@ -3,10 +3,7 @@ package com.dobraccon.painmarket.controller;
 import com.dobraccon.painmarket.model.Customer;
 import com.dobraccon.painmarket.service.CustomerService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
@@ -17,5 +14,10 @@ public class CustomerController {
     @PostMapping
     public void saveCustomer(@RequestBody Customer customer) {
         service.saveCustomer(customer);
+    }
+
+    @GetMapping
+    public Customer findByCustomerId(@PathVariable long id) {
+        return service.findByCustomerId(id);
     }
 }

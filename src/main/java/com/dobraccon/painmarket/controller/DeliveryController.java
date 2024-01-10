@@ -3,10 +3,7 @@ package com.dobraccon.painmarket.controller;
 import com.dobraccon.painmarket.model.Delivery;
 import com.dobraccon.painmarket.service.DeliveryService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
@@ -17,5 +14,10 @@ public class DeliveryController {
     @PostMapping
     public void createDelivery(@RequestBody Delivery delivery) {
         service.createDelivery(delivery);
+    }
+
+    @GetMapping
+    public Delivery findByDeliveryId(@PathVariable long id) {
+        return service.findByDeliveryId(id);
     }
 }

@@ -13,4 +13,8 @@ public class DeliveryService {
     public void createDelivery(Delivery delivery) {
         repository.createDelivery(delivery);
     }
+
+    public Delivery findByDeliveryId(long id) {
+        return repository.findByDeliveryId(id);
+    }
 }
