@@ -16,7 +16,7 @@ public class CustomerController {
         service.saveCustomer(customer);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Customer findByCustomerId(@PathVariable long id) {
         return service.findByCustomerId(id);
     }

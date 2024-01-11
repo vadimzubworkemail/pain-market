@@ -16,7 +16,7 @@ public class DeliveryController {
         service.createDelivery(delivery);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Delivery findByDeliveryId(@PathVariable long id) {
         return service.findByDeliveryId(id);
     }
