@@ -13,4 +13,8 @@ public class OrderService {
     public void createOrder(Order order) {
         repository.createOrder(order);
     }
+
+    public Order findByOrderId(long id) {
+        return repository.findByOrderId(id);
+    }
 }
