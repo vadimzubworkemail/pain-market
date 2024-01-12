@@ -13,7 +13,7 @@ public class CustomerRepository {
 
     public void saveCustomer(Customer customer) {
         String sql = String.format(
-                "INSERT INTO customer(id, email) VALUES(nextval('customer_sequence'), '%s');"
+                "INSERT INTO customers(id, email) VALUES(nextval('customers_sequence'), '%s');"
                 , customer.getEmail());
         jdbcTemplate.execute(sql);
     }

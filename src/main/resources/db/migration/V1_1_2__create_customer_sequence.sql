@@ -1,2 +1,0 @@
-CREATE SEQUENCE IF NOT EXISTS customer_sequence
-START 101;
